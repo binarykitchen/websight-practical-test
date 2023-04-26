@@ -8,8 +8,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 2. `npm start`
 3. Open http://localhost:3000
 4. For login you can use these details:
-   4.1 As a viewer, username = `some.viewer` and password `ViewMeNow123!`
-   4.2 As an editor, username = `some.editor` and password `EditMeNow123!`
+
+As a viewer, username = `some.viewer` and password `ViewMeNow123!`
+
+As an editor, username = `some.editor` and password `EditMeNow123!`
 
 ## Some Notes
 

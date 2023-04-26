@@ -1,0 +1,30 @@
+@import "./variables.scss";
+
+body {
+  margin: 0;
+  font-family: "Franklin ITC", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: $link-color;
+}
+
+main {
+  padding: $spacing-large;
+  background: linear-gradient(
+      180deg,
+      rgba($dark-background-color, $alpha: 25%),
+      $light-background-color $spacing-regular
+    )
+    repeat-x 0;
+
+  > section {
+    background-image: $grey-diamonds-gradient;
+    margin: $spacing-regular auto;
+    border-radius: $spacing-regular;
+    padding: $spacing-regular;
+    text-align: center;
+  }
+}

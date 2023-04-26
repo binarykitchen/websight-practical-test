@@ -1,0 +1,39 @@
+@import "./../../styles/variables.scss";
+@import "./../../styles/keyframes.scss";
+
+header {
+  background-image: $small-inverse-grey-diamonds-gradient;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $dark-background-text-color;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
+
+  > h1,
+  > div {
+    padding: 0 1rem;
+  }
+
+  > h1 {
+    font-size: 1.5em;
+    text-align: center;
+
+    > img {
+      height: 1.5em;
+      pointer-events: none;
+      vertical-align: bottom;
+    }
+  }
+
+  > div.right {
+    text-align: right;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  header h1 img {
+    animation: rotate-clockwise infinite 18s linear;
+  }
+}

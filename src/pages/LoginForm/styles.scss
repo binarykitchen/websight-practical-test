@@ -1,0 +1,73 @@
+@import "./../../styles/variables.scss";
+
+section#login-page {
+  max-width: 40vw;
+}
+
+form {
+  margin-top: $spacing-large;
+
+  label {
+    font-weight: bold;
+    opacity: 0.8;
+    display: block;
+    cursor: pointer;
+    margin: $spacing-regular $spacing-tiny $spacing-tiny;
+  }
+
+  p.error-message {
+    margin-top: $spacing-small;
+    color: $invalid-color;
+    font-size: 85%;
+
+    &::after {
+      // This ensures height of form inputs does not vary even when empty
+      content: "\00a0";
+    }
+  }
+
+  input {
+    background: linear-gradient(
+      0deg,
+      darken($light-background-color, 3),
+      darken($light-background-color, 0.1) 10px
+    );
+    transition: all 0.1s ease;
+  }
+
+  input.valid:focus {
+    border-color: $valid-color;
+    box-shadow: 0 1px 4px rgba($valid-color, 0.6);
+  }
+
+  input.invalid:focus {
+    border-color: $invalid-color;
+    box-shadow: 0 1px 4px rgba($invalid-color, 0.6);
+  }
+
+  input,
+  button {
+    border: 1px solid $dark-background-color;
+    border-radius: $spacing-tiny;
+    padding: $spacing-small;
+    outline: none;
+  }
+
+  input:focus,
+  button:not(:disabled):focus,
+  button:not(:disabled):hover {
+    transform: scale(1.05);
+  }
+
+  button {
+    background: $dark-background-color;
+    color: $dark-background-text-color;
+    cursor: pointer;
+    margin: $spacing-small 0 $spacing-regular;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+// I'd rather use global CSS variables
+
+$dark-background-color: rgb(33, 33, 33);
+$dark-background-text-color: #fff;
+
+$light-background-color: #fff;
+
+$table-border-color: #ddd;
+
+$link-color: #61dafb;
+$valid-color: #30d814;
+$invalid-color: #ca4b2a;
+
+$spacing-tiny: 0.25em;
+$spacing-small: 0.5em;
+$spacing-regular: 1em;
+$spacing-large: 2em;
+
+// TODO write a SASS function for this
+$grey-diamonds-gradient: linear-gradient(
+    135deg,
+    rgba(244, 244, 244, 0.07) 0%,
+    rgba(244, 244, 244, 0.07) 12.5%,
+    rgba(211, 211, 211, 0.07) 12.5%,
+    rgba(211, 211, 211, 0.07) 25%,
+    rgba(178, 178, 178, 0.07) 25%,
+    rgba(178, 178, 178, 0.07) 37.5%,
+    rgba(145, 145, 145, 0.07) 37.5%,
+    rgba(145, 145, 145, 0.07) 50%,
+    rgba(113, 113, 113, 0.07) 50%,
+    rgba(113, 113, 113, 0.07) 62.5%,
+    rgba(80, 80, 80, 0.07) 62.5%,
+    rgba(80, 80, 80, 0.07) 75%,
+    rgba(47, 47, 47, 0.07) 75%,
+    rgba(47, 47, 47, 0.07) 87.5%,
+    rgba(14, 14, 14, 0.07) 87.5%,
+    rgba(14, 14, 14, 0.07) 100%
+  ),
+  linear-gradient(
+    45deg,
+    rgba(236, 236, 236, 0.07) 0%,
+    rgba(236, 236, 236, 0.07) 12.5%,
+    rgba(210, 210, 210, 0.07) 12.5%,
+    rgba(210, 210, 210, 0.07) 25%,
+    rgba(183, 183, 183, 0.07) 25%,
+    rgba(183, 183, 183, 0.07) 37.5%,
+    rgba(157, 157, 157, 0.07) 37.5%,
+    rgba(157, 157, 157, 0.07) 50%,
+    rgba(130, 130, 130, 0.07) 50%,
+    rgba(130, 130, 130, 0.07) 62.5%,
+    rgba(104, 104, 104, 0.07) 62.5%,
+    rgba(104, 104, 104, 0.07) 75%,
+    rgba(77, 77, 77, 0.07) 75%,
+    rgba(77, 77, 77, 0.07) 87.5%,
+    rgba(51, 51, 51, 0.07) 87.5%,
+    rgba(51, 51, 51, 0.07) 100%
+  ),
+  linear-gradient(90deg, $light-background-color, $light-background-color);
+
+$small-inverse-grey-diamonds-gradient: radial-gradient(
+    circle at center center,
+    rgba($dark-background-color, 0),
+    $dark-background-color
+  ),
+  repeating-linear-gradient(
+    135deg,
+    $dark-background-color 0px,
+    $dark-background-color 1px,
+    transparent 1px,
+    transparent 4px
+  ),
+  repeating-linear-gradient(
+    45deg,
+    lighten($dark-background-color, 10) 0px,
+    lighten($dark-background-color, 10) 5px,
+    transparent 5px,
+    transparent 6px
+  ),
+  linear-gradient(90deg, $dark-background-color, $dark-background-color);
